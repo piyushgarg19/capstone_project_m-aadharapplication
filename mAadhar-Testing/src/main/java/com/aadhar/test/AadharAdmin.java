@@ -6,10 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class AadharAdmin {
-	static WebDriver webdriver = null;
+	public WebDriver webdriver;
 
 	@Test
 	public void ChromeBrowser() {
+	
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\Downloads\\chromedriver-win32\\chromedriver-win32\\chromedriver.exe");
 		webdriver = new ChromeDriver();
 		webdriver.manage().window().maximize();
 		System.out.println("Chrome Browser is Opened!!");
